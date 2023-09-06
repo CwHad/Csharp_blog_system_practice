@@ -1,0 +1,17 @@
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\bin\Debug\net6.0\MyBBSWebApi.BLL.deps.json
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\bin\Debug\net6.0\MyBBSWebApi.BLL.dll
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\bin\Debug\net6.0\MyBBSWebApi.BLL.pdb
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\bin\Debug\net6.0\MyBBSWebApi.DAL.dll
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\bin\Debug\net6.0\MyBBSWebApi.Models.dll
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\bin\Debug\net6.0\MyBBSWebApi.DAL.pdb
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\bin\Debug\net6.0\MyBBSWebApi.Models.pdb
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\obj\Debug\net6.0\MyBBSWebApi.BLL.csproj.AssemblyReference.cache
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\obj\Debug\net6.0\MyBBSWebApi.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\obj\Debug\net6.0\MyBBSWebApi.BLL.AssemblyInfoInputs.cache
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\obj\Debug\net6.0\MyBBSWebApi.BLL.AssemblyInfo.cs
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\obj\Debug\net6.0\MyBBSWebApi.BLL.csproj.CoreCompileInputs.cache
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\obj\Debug\net6.0\MyBBSWebApi.BLL.csproj.CopyComplete
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\obj\Debug\net6.0\MyBBSWebApi.BLL.dll
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\obj\Debug\net6.0\refint\MyBBSWebApi.BLL.dll
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\obj\Debug\net6.0\MyBBSWebApi.BLL.pdb
+D:\CPP\CPP_new_exercise\MyBBSWebApi.BLL\obj\Debug\net6.0\ref\MyBBSWebApi.BLL.dll
