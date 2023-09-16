@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MyBBSWebApi.BLL\MyBBSWebApi.BLL.csproj" />
     <ProjectReference Include="..\MyBBSWebApi.Models\MyBBSWebApi.Models.csproj" />
+    <ProjectReference Include="..\MyBBSWebApi.Common\MyBBSWebApi.Common.csproj" />
   </ItemGroup>
 
 </Project>

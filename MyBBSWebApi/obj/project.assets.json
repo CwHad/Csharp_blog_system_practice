@@ -803,6 +803,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "MyBBSWebApi.Common": "1.0.0",
           "MyBBSWebApi.DAL": "1.0.0",
           "MyBBSWebApi.Models": "1.0.0"
         },
@@ -811,6 +812,16 @@
         },
         "runtime": {
           "bin/placeholder/MyBBSWebApi.BLL.dll": {}
+        }
+      },
+      "MyBBSWebApi.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/MyBBSWebApi.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyBBSWebApi.Common.dll": {}
         }
       },
       "MyBBSWebApi.DAL/1.0.0": {
@@ -2251,6 +2262,11 @@
       "path": "../MyBBSWebApi.BLL/MyBBSWebApi.BLL.csproj",
       "msbuildProject": "../MyBBSWebApi.BLL/MyBBSWebApi.BLL.csproj"
     },
+    "MyBBSWebApi.Common/1.0.0": {
+      "type": "project",
+      "path": "../MyBBSWebApi.Common/MyBBSWebApi.Common.csproj",
+      "msbuildProject": "../MyBBSWebApi.Common/MyBBSWebApi.Common.csproj"
+    },
     "MyBBSWebApi.DAL/1.0.0": {
       "type": "project",
       "path": "../MyBBSWebApi.DAL/MyBBSWebApi.DAL.csproj",
@@ -2266,6 +2282,7 @@
     "net6.0": [
       "Microsoft.Data.SqlClient >= 5.1.1",
       "MyBBSWebApi.BLL >= 1.0.0",
+      "MyBBSWebApi.Common >= 1.0.0",
       "MyBBSWebApi.Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -2277,11 +2294,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CPP\\CPP_new_exercise\\MyBBSWebApi\\MyBBSWebApi.csproj",
+      "projectUniqueName": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi\\MyBBSWebApi.csproj",
       "projectName": "MyBBSWebApi",
-      "projectPath": "D:\\CPP\\CPP_new_exercise\\MyBBSWebApi\\MyBBSWebApi.csproj",
+      "projectPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi\\MyBBSWebApi.csproj",
       "packagesPath": "C:\\Users\\46175\\.nuget\\packages\\",
-      "outputPath": "D:\\CPP\\CPP_new_exercise\\MyBBSWebApi\\obj\\",
+      "outputPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2302,11 +2319,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\CPP\\CPP_new_exercise\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj": {
-              "projectPath": "D:\\CPP\\CPP_new_exercise\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj"
+            "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj": {
+              "projectPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj"
             },
-            "D:\\CPP\\CPP_new_exercise\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
-              "projectPath": "D:\\CPP\\CPP_new_exercise\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj"
+            "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj": {
+              "projectPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj"
+            },
+            "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
+              "projectPath": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj"
             }
           }
         }

@@ -20,10 +20,10 @@ namespace MyBBSWebApi.Controllers
 
         [HttpGet(Name = "GetWeatherForecast")]
         // Get/Post/Put/Delete
-        // Get => Êı¾İµÄ»ñÈ¡
-        // Post => Êı¾İµÄ²åÈë
-        // Put => Êı¾İ¸üĞÂ
-        // Delete => Êı¾İµÄÉ¾³ı
+        // Get => æ•°æ®çš„è·å–
+        // Post => æ•°æ®çš„æ’å…¥
+        // Put => æ•°æ®æ›´æ–°
+        // Delete => æ•°æ®çš„åˆ é™¤
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast

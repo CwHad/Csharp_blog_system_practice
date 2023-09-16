@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.Data.SqlClient": "5.1.1",
           "MyBBSWebApi.BLL": "1.0.0",
+          "MyBBSWebApi.Common": "1.0.0",
           "MyBBSWebApi.Models": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
@@ -456,11 +457,17 @@
       },
       "MyBBSWebApi.BLL/1.0.0": {
         "dependencies": {
+          "MyBBSWebApi.Common": "1.0.0",
           "MyBBSWebApi.DAL": "1.0.0",
           "MyBBSWebApi.Models": "1.0.0"
         },
         "runtime": {
           "MyBBSWebApi.BLL.dll": {}
+        }
+      },
+      "MyBBSWebApi.Common/1.0.0": {
+        "runtime": {
+          "MyBBSWebApi.Common.dll": {}
         }
       },
       "MyBBSWebApi.DAL/1.0.0": {
@@ -808,6 +815,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "MyBBSWebApi.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyBBSWebApi.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

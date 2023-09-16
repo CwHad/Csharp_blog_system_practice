@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using MyBBSWebApi.BLL;
+using MyBBSWebApi.Common;
 using MyBBSWebApi.Models;
 using System.Data;
 
@@ -10,7 +12,7 @@ namespace MyBBSWebApi.Controllers
     // [Route("api/[controller]/[action]")]  // 这里体现路由的业务
     [ApiController] // 通过访问规则去体现做什么业务
     [Route("[controller]")] // restful风格
-
+    [EnableCors("any")]  // 允许跨域
     public class LoginController : ControllerBase
     {
         private readonly IUserBll _userBll;
@@ -30,13 +32,16 @@ namespace MyBBSWebApi.Controllers
             // 这里就实现了一个面向抽象的开发 依赖倒置
             // IUserBll userBll = new UserBll(); 如果上面的依赖注入已经拿到了数据 这里就可以不用实例化了
             List<Users> userList = _userBll.GetAll();
+            
             return userList;
         }
         [HttpGet("{userNo}/{password}")]
         // 如果这样定义了路由规则的话 那么会在swaggle里面限定死 一定要传这两个参数
         public Users GetLoginRes(string userNo, string password)
         {
+            // string md5Str = password.ToMd5();
             Users user = _userBll.CheckLogin(userNo, password);
+            Console.WriteLine(1111111);
             return user;
         }
         [HttpPost]
@@ -45,9 +50,16 @@ namespace MyBBSWebApi.Controllers
             return _userBll.AddUser(userNo, userName, userLevel, IsDelete, password);
         }
         [HttpPut]
-        public string Update(int id, string? UserNo, string? UserName, string? IsDelete, string? password, int? UserLevel)
+        public string Update(int id, 
+        string? UserNo, 
+        string? UserName, 
+        string? IsDelete, 
+        string? password, 
+        int? UserLevel,
+        Guid token,
+        Guid autoLoginTag)
         {
-            return _userBll.UpdateUser(id, UserNo, UserName, IsDelete, password, UserLevel);
+            return _userBll.UpdateUser(id, UserNo, UserName, IsDelete, password, UserLevel, token,autoLoginTag, null);
         }
         [HttpDelete]
         public string Remove(int id)

@@ -1,18 +1,21 @@
 using MyBBSWebApi.BLL;
+using MyBBSWebApi.BLL.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 /*
- *  ÕâÊÇÒÀÀµ×¢ÈëµÄÊµÀý´´½¨
-builder.Services.AddSingleton(); // µ¥Àý Ö»ÒªÊµÀý´´½¨ÒÔºó Ò»Ö±ÔÚÄÚ´æÖÐ±£Áô ²»ÔÙ×¢Ïú
-builder.Services.AddScoped();   // µ¥Àý ÔÚÒ»´ÎÇëÇóÖÐ ÊµÀý»¯ÇëÇóµÄ¶ÔÏó²»±»×¢Ïú
-builder.Services.AddTransient;  // Ë²Ê± Ê¹ÓÃÍêÕâ¸öÊµÀýºó ¾Í»á±»Á¢Âí×¢Ïúµô
+ *  è¿™æ˜¯ä¾èµ–æ³¨å…¥çš„å®žä¾‹åˆ›å»º
+builder.Services.AddSingleton(); // å•ä¾‹ åªè¦å®žä¾‹åˆ›å»ºä»¥åŽ ä¸€ç›´åœ¨å†…å­˜ä¸­ä¿ç•™ ä¸å†æ³¨é”€
+builder.Services.AddScoped();   // å•ä¾‹ åœ¨ä¸€æ¬¡è¯·æ±‚ä¸­ å®žä¾‹åŒ–è¯·æ±‚çš„å¯¹è±¡ä¸è¢«æ³¨é”€
+builder.Services.AddTransient;  // çž¬æ—¶ ä½¿ç”¨å®Œè¿™ä¸ªå®žä¾‹åŽ å°±ä¼šè¢«ç«‹é©¬æ³¨é”€æŽ‰
 
 */
+builder.Services.AddCors(c => c.AddPolicy("any", p => p.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod()));
 
 builder.Services.AddSingleton<IUserBll, UserBll>();
+builder.Services.AddSingleton<IPostsBLL, PostsBLL>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -29,6 +32,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+
+app.UseCors();
 
 app.MapControllers();
 

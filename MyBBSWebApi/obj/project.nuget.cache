@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4fXJm/JYLn6JfkIDli83AgkukfXAjO29fpzkjzALW2EdJAmejm2A2XkfnsTVU/M4Xe12tCR+jdpyo6Tbr+O5Ew==",
+  "dgSpecHash": "A7m8Swic7OR4iftaJzXnI1V6ZOyR5/ZxauSsO6cYh4+lgfxT4R2OUnN3M7VcwlnJ/3KRfDD1Tv/DI5bdeEgrZw==",
   "success": true,
-  "projectFilePath": "D:\\CPP\\CPP_new_exercise\\MyBBSWebApi\\MyBBSWebApi.csproj",
+  "projectFilePath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi\\MyBBSWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\46175\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\46175\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
