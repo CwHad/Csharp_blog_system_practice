@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MyBBSWebApi.DAL\MyBBSWebApi.DAL.csproj" />
     <ProjectReference Include="..\MyBBSWebApi.Models\MyBBSWebApi.Models.csproj" />
+    <ProjectReference Include="..\MyBBSWebApi.Common\MyBBSWebApi.Common.csproj" />
   </ItemGroup>
 
 </Project>

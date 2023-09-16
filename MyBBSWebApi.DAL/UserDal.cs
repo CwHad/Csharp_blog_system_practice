@@ -32,11 +32,37 @@ namespace MyBBSWebApi.DAL
             return user;
         }
 
+        public Users GetUserByToken(string token)
+        {
+            DataRow row = null;
+            DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE Token = @Token",
+                new SqlParameter("@Token", token));
+            // 这里能这样写的原因是因为吧SqlHelper定义成了静态的 作为工具类 尽量的是静态的比较好
+            if (res.Rows.Count > 0)
+            {
+                row = res.Rows[0];
+            }
+            Users user = ToModel(row);
+            return user;
+        }
+
         public List<Users> GetUserByUserNoAndPassword(string? userNo = null, string? password = null)
         {
             DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo = @UserNo AND Password = @Password",
                 new SqlParameter("@UserNo", userNo),
                 new SqlParameter("@Password", password)
+                );
+            // 这里能这样写 (SqlHelper) 直接使用SqlHelper类 的原因是因为吧SqlHelper定义成了静态的 作为工具类 尽量的是静态的比较好
+
+            List<Users> userList = ToModelList(res);
+            return userList;
+        }
+
+        public List<Users> GetUserByUserNoAndAutoLoginTag(string userNo, string autoLoginTag)
+        {
+            DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo = @UserNo AND AutoLoginTag = @AutoLoginTag",
+                new SqlParameter("@UserNo", userNo),
+                new SqlParameter("@AutoLoginTag", autoLoginTag)
                 );
             // 这里能这样写 (SqlHelper) 直接使用SqlHelper类 的原因是因为吧SqlHelper定义成了静态的 作为工具类 尽量的是静态的比较好
 
@@ -55,7 +81,15 @@ namespace MyBBSWebApi.DAL
                 );
         }
 
-        public int UpdateUser(int id, string? UserNo, string? UserName, string? IsDelete, string? password, int? UserLevel)
+        public int UpdateUser(int id, 
+        string? UserNo, 
+        string? UserName, 
+        string? IsDelete, 
+        string? password, 
+        int? UserLevel,
+        Guid? token,
+        Guid? autoLoginTag,
+        DateTime? autoLoginLimitTime)
         {
             DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE Id = @Id",
                 new SqlParameter("@Id", id));
@@ -68,16 +102,23 @@ namespace MyBBSWebApi.DAL
                 user.UserNo = UserNo ?? row["UserNo"]?.ToString() ?? string.Empty;
                 user.UserName = UserName ?? row["UserName"]?.ToString() ?? string.Empty;
                 user.UserLevel = UserLevel ?? (int)row["UserLevel"];
-                user.IsDelete = row["IsDelete"] as bool? ?? false;
+                // user.IsDelete = row["IsDelete"] as bool? ?? false;
+                user.IsDelete = (string)row["IsDelete"];
                 user.Password = password ?? row["Password"]?.ToString() ?? string.Empty;
+                user.Token = token ?? new Guid();
+                user.AutoLoginTag = autoLoginTag ?? new Guid();
+                user.AutoLoginLimitTime = autoLoginLimitTime;
 
-                rowCount = SqlHelper.ExecuteNonQuery("UPDATE Users Set UserNo = @UserNo,UserName = @UserName, UserLevel = @UserLevel, IsDelete = @IsDelete, Password = @Password WHERE Id = @Id",
+                rowCount = SqlHelper.ExecuteNonQuery("UPDATE Users Set UserNo = @UserNo,UserName = @UserName, UserLevel = @UserLevel, IsDelete = @IsDelete, Password = @Password, Token = @Token, AutoLoginTag = @AutoLoginTag, AutoLoginLimitTime = @AutoLoginLimitTime WHERE Id = @Id",
                     new SqlParameter("@UserNo", user.UserNo),
                     new SqlParameter("@UserName", user.UserName),
                     new SqlParameter("@UserLevel", user.UserLevel),
                     new SqlParameter("@IsDelete", user.IsDelete),
                     new SqlParameter("@Password", user.Password),
-                    new SqlParameter("@Id", user.Id)
+                    new SqlParameter("@Token", user.Token),
+                    new SqlParameter("@Id", user.Id),
+                    new SqlParameter("@AutoLoginTag", user.AutoLoginTag),
+                    new SqlParameter("@AutoLoginLimitTime", user.AutoLoginLimitTime)
                     );
             }
             return rowCount;
@@ -110,8 +151,13 @@ namespace MyBBSWebApi.DAL
             user.UserNo = row["UserNo"]?.ToString() ?? string.Empty;
             user.UserName = row["UserName"]?.ToString() ?? string.Empty;
             user.UserLevel = (int)row["UserLevel"];
-            user.IsDelete = row["IsDelete"] as bool? ?? false;
+            // user.IsDelete = row["IsDelete"] as bool? ?? false;
+            user.IsDelete = (string)row["IsDelete"];
             user.Password = row["Password"]?.ToString() ?? string.Empty;
+            user.Token = (Guid)row["Token"];
+            // user.AutoLoginTag =  new Guid(row["AutoLoginTag"].ToString());
+            user.AutoLoginTag = (Guid)row["AutoLoginTag"];
+            user.AutoLoginLimitTime = (DateTime)row["AutoLoginLimitTime"];
             return user;
         }
     }

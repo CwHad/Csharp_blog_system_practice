@@ -37,5 +37,30 @@ namespace MyBBSWebApi.DAL.Core
             // 这里是直接返回被影响的行数
             return cmd.ExecuteNonQuery();
         }
+
+        /// <summary>
+        /// 这是将值传入数据库的时候，如果为null的时候，就转换成数据库的DBNull
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static object ToDbValue(object value) {
+            if(value == null)
+            {
+                return DBNull.Value;
+            }
+            else {
+                return value;
+            }
+        }
+
+        /// <summary>
+        /// 这是从数据库取值的时候，如果取出的值为DBNull, 则转换为null
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static object FromDbValue(object value)
+        {
+            return value == DBNull.Value ? null : value;
+        }
     }
 }

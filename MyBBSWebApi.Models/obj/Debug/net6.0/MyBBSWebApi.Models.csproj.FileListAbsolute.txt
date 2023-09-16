@@ -10,3 +10,15 @@ D:\CPP\CPP_new_exercise\MyBBSWebApi.Models\obj\Debug\net6.0\MyBBSWebApi.Models.d
 D:\CPP\CPP_new_exercise\MyBBSWebApi.Models\obj\Debug\net6.0\refint\MyBBSWebApi.Models.dll
 D:\CPP\CPP_new_exercise\MyBBSWebApi.Models\obj\Debug\net6.0\MyBBSWebApi.Models.pdb
 D:\CPP\CPP_new_exercise\MyBBSWebApi.Models\obj\Debug\net6.0\ref\MyBBSWebApi.Models.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\bin\Debug\net6.0\MyBBSWebApi.Models.deps.json
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\bin\Debug\net6.0\MyBBSWebApi.Models.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\bin\Debug\net6.0\MyBBSWebApi.Models.pdb
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\obj\Debug\net6.0\MyBBSWebApi.Models.csproj.AssemblyReference.cache
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\obj\Debug\net6.0\MyBBSWebApi.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\obj\Debug\net6.0\MyBBSWebApi.Models.AssemblyInfoInputs.cache
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\obj\Debug\net6.0\MyBBSWebApi.Models.AssemblyInfo.cs
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\obj\Debug\net6.0\MyBBSWebApi.Models.csproj.CoreCompileInputs.cache
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\obj\Debug\net6.0\MyBBSWebApi.Models.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\obj\Debug\net6.0\refint\MyBBSWebApi.Models.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\obj\Debug\net6.0\MyBBSWebApi.Models.pdb
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.Models\obj\Debug\net6.0\ref\MyBBSWebApi.Models.dll

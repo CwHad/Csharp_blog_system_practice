@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CPP\\CPP_new_exercise\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj",
+      "projectUniqueName": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj",
       "projectName": "MyBBSWebApi.Models",
-      "projectPath": "D:\\CPP\\CPP_new_exercise\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj",
+      "projectPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj",
       "packagesPath": "C:\\Users\\46175\\.nuget\\packages\\",
-      "outputPath": "D:\\CPP\\CPP_new_exercise\\MyBBSWebApi.Models\\obj\\",
+      "outputPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
