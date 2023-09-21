@@ -13,7 +13,7 @@ namespace MyBBSWebApi.BLL
         List<Users> GetAll();
         Users CheckLogin(string userNo, string password);
         Users GetUserByToken(string token);
-        string AddUser(string userNo, string userName, int userLevel, string IsDelete, string password);
+        string AddUser(Users user);
         string UpdateUser(int id, string? UserNo, string? UserName, string? IsDelete, string? password, int? UserLevel, Guid? token, Guid? autoLoginTag, DateTime? autoLoginLimitTime);
         string RemoveUser(int id);
          

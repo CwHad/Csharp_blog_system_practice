@@ -61,10 +61,11 @@ namespace MyBBSWebApi.BLL
             }
             return user;
         }
-        public string AddUser(string userNo, string userName, int userLevel, string IsDelete, string password)
+        public string AddUser(Users user)
         {
-            UserDal user = new UserDal();
-            int rows = user.AddUser(userNo, userName, userLevel, IsDelete, password);
+            user.IsDelete = user.IsDelete ?? "0";
+            UserDal userDal = new UserDal();
+            int rows = userDal.AddUser(user);
             if (rows > 0)
             {
 
