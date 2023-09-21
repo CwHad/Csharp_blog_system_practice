@@ -41,13 +41,12 @@ namespace MyBBSWebApi.Controllers
         {
             // string md5Str = password.ToMd5();
             Users user = _userBll.CheckLogin(userNo, password);
-            Console.WriteLine(1111111);
             return user;
         }
         [HttpPost]
-        public string Insert(string userNo, string userName, int userLevel, string IsDelete, string password)
-        {
-            return _userBll.AddUser(userNo, userName, userLevel, IsDelete, password);
+        public string Insert(Users user)
+        {   
+            return _userBll.AddUser(user);
         }
         [HttpPut]
         public string Update(int id, 
