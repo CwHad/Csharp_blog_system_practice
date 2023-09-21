@@ -70,14 +70,14 @@ namespace MyBBSWebApi.DAL
             return userList;
         }
 
-        public int AddUser(string userNo, string userName, int userLevel, string IsDelete, string password)
+        public int AddUser(Users user)
         {
             return SqlHelper.ExecuteNonQuery("INSERT INTO Users(UserNo,UserName,UserLevel,IsDelete,Password) VALUES(@userNo,@userName,@userLevel,@IsDelete,@password)",
-                new SqlParameter("@userNo", userNo),
-                new SqlParameter("@userName", userName),
-                new SqlParameter("@userLevel", userLevel),
-                new SqlParameter("@IsDelete", IsDelete),
-                new SqlParameter("@password", password)
+                new SqlParameter("@userNo", user.UserNo),
+                new SqlParameter("@userName", user.UserName),
+                new SqlParameter("@userLevel", user.UserLevel),
+                new SqlParameter("@IsDelete", user.IsDelete),
+                new SqlParameter("@password", user.Password)
                 );
         }
 
