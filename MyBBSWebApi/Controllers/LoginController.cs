@@ -31,7 +31,6 @@ namespace MyBBSWebApi.Controllers
         {
             // 这里就实现了一个面向抽象的开发 依赖倒置
             // IUserBll userBll = new UserBll(); 如果上面的依赖注入已经拿到了数据 这里就可以不用实例化了
-            // Console.WriteLine("这里拿取了所有的数据");
             List<Users> userList = _userBll.GetAll();
             
             return userList;
