@@ -7,6 +7,7 @@ using MyBBSWebApi.BLL;
 using MyBBSWebApi.BLL.Interfaces;
 using MyBBSWebApi.Model;
 using MyBBSWebApi.Models;
+using MyBBSWebApi.Models.Models;
 
 namespace MyBBSWebApi.Controllers
 {
@@ -22,10 +23,12 @@ namespace MyBBSWebApi.Controllers
             _postBll = postsBLL;
         }
         [HttpGet("{token}")]
-        public List<Posts> GetPosts(string token) {
-            Users user = _userBll.GetUserByToken(token);
+        public List<Post> GetPosts(string token) {
+            // Users user = _userBll.GetUserByToken(token);
             // 获取Posts
-            return _postBll.ListAll().ToList();
+            List<Post> list = _postBll.GetAllOfPage().ToList();
+            // return _postBll.GetAll();
+            return list;    
         }
     }
 }

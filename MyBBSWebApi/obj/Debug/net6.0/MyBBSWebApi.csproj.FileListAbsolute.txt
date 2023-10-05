@@ -134,3 +134,16 @@ D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\obj\Debug\net6.0\MyBBSWebApi
 D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\obj\Debug\net6.0\ref\MyBBSWebApi.dll
 D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\MyBBSWebApi.Common.dll
 D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\MyBBSWebApi.Common.pdb
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll

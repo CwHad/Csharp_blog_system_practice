@@ -48,6 +48,11 @@ namespace MyBBSWebApi.Controllers
         {   
             return _userBll.AddUser(user);
         }
+         [HttpPost("test")]
+        public void Test(TestApiControllerViewModel test)
+        {   
+            // return _userBll.AddUser(user);
+        }
         [HttpPut]
         public string Update(int id, 
         string? UserNo, 

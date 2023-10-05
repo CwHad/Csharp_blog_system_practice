@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using MyBBSWebApi.DAL.Factorys;
+using MyBBSWebApi.Models.Models;
 
 namespace MyBBSWebApi.Controllers
 {
@@ -24,15 +26,22 @@ namespace MyBBSWebApi.Controllers
         // Post => 数据的插入
         // Put => 数据更新
         // Delete => 数据的删除
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<Post> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            // return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            // {
+            //     Date = DateTime.Now.AddDays(index),
+            //     TemperatureC = Random.Shared.Next(-20, 55),
+            //     Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            // })
+            // .ToArray();
+
+            // using var context = new MySecondDbContext();
+            // var res = context.Posts.ToList();
+            // return res;
+
+            var context = DbContextFactory.GetDbContext();
+            return context.Posts.ToList();
         }
     }
 }

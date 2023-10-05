@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4DiPpVVw3rXnmQM42QJX15NBYbumyXnJ8ieoE10gKE0Y3FMAFXtdCFf7nSQDCsW+UdisSM2irTbOVh39KVO8QQ==",
+  "dgSpecHash": "xN0yuOBxIZ3gWdhmzHDUyYAGBDn4//kMvj0sqjA55dKkQVh+2Y49hXyG2YUDIwX21BcTOpvYjEbk5XSrIRW4wA==",
   "success": true,
-  "projectFilePath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj",
+  "projectFilePath": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

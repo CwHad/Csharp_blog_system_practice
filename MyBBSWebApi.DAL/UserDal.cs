@@ -60,14 +60,22 @@ namespace MyBBSWebApi.DAL
 
         public List<Users> GetUserByUserNoAndAutoLoginTag(string userNo, string autoLoginTag)
         {
-            DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo = @UserNo AND AutoLoginTag = @AutoLoginTag",
+            try
+            {
+                DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo = @UserNo AND AutoLoginTag = @AutoLoginTag",
                 new SqlParameter("@UserNo", userNo),
                 new SqlParameter("@AutoLoginTag", autoLoginTag)
                 );
-            // 这里能这样写 (SqlHelper) 直接使用SqlHelper类 的原因是因为吧SqlHelper定义成了静态的 作为工具类 尽量的是静态的比较好
+                // 这里能这样写 (SqlHelper) 直接使用SqlHelper类 的原因是因为吧SqlHelper定义成了静态的 作为工具类 尽量的是静态的比较好
 
-            List<Users> userList = ToModelList(res);
-            return userList;
+                List<Users> userList = ToModelList(res);
+                return userList;
+            }
+            catch (System.Exception)
+            {
+                return default;
+            }
+
         }
 
         public int AddUser(Users user)
@@ -81,11 +89,34 @@ namespace MyBBSWebApi.DAL
                 );
         }
 
-        public int UpdateUser(int id, 
-        string? UserNo, 
-        string? UserName, 
-        string? IsDelete, 
-        string? password, 
+        public int UpdateUserOfUI(Users user)
+        {
+            DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE Id = @Id",
+                new SqlParameter("@Id", user.Id));
+            int rowCount = 0;
+            if (res.Rows.Count > 0)
+            {
+                DataRow row = res.Rows[0];
+                rowCount = SqlHelper.ExecuteNonQuery("UPDATE Users Set UserNo = @UserNo,UserName = @UserName, UserLevel = @UserLevel, IsDelete = @IsDelete, Password = @Password, Token = @Token, AutoLoginTag = @AutoLoginTag, AutoLoginLimitTime = @AutoLoginLimitTime WHERE Id = @Id",
+                    new SqlParameter("@UserNo", user.UserNo),
+                    new SqlParameter("@UserName", user.UserName),
+                    new SqlParameter("@UserLevel", user.UserLevel),
+                    new SqlParameter("@IsDelete", user.IsDelete),
+                    new SqlParameter("@Password", user.Password),
+                    new SqlParameter("@Token", user.Token),
+                    new SqlParameter("@Id", user.Id),
+                    new SqlParameter("@AutoLoginTag", user.AutoLoginTag),
+                    new SqlParameter("@AutoLoginLimitTime", user.AutoLoginLimitTime)
+                    );
+            }
+            return rowCount;
+        }
+
+        public int UpdateUser(int id,
+        string? UserNo,
+        string? UserName,
+        string? IsDelete,
+        string? password,
         int? UserLevel,
         Guid? token,
         Guid? autoLoginTag,
@@ -147,17 +178,17 @@ namespace MyBBSWebApi.DAL
         {
             Users user = new();
             // 这个方法只是在这个类中进行使用 所以是private的
-            user.Id = (int)row["Id"];
-            user.UserNo = row["UserNo"]?.ToString() ?? string.Empty;
-            user.UserName = row["UserName"]?.ToString() ?? string.Empty;
-            user.UserLevel = (int)row["UserLevel"];
+            user.Id = (int)SqlHelper.FromDbValue(row["Id"]);
+            user.UserNo = SqlHelper.FromDbValue(row["UserNo"])?.ToString() ?? string.Empty;
+            user.UserName = SqlHelper.FromDbValue(row["UserName"])?.ToString() ?? string.Empty;
+            user.UserLevel = (int)SqlHelper.FromDbValue(row["UserLevel"]);
             // user.IsDelete = row["IsDelete"] as bool? ?? false;
-            user.IsDelete = (string)row["IsDelete"];
-            user.Password = row["Password"]?.ToString() ?? string.Empty;
-            user.Token = (Guid)row["Token"];
+            user.IsDelete = (string)SqlHelper.FromDbValue(row["IsDelete"]);
+            user.Password = SqlHelper.FromDbValue(row["Password"])?.ToString() ?? string.Empty;
+            user.Token = (Guid?)SqlHelper.FromDbValue(row["Token"]);
             // user.AutoLoginTag =  new Guid(row["AutoLoginTag"].ToString());
-            user.AutoLoginTag = (Guid)row["AutoLoginTag"];
-            user.AutoLoginLimitTime = (DateTime)row["AutoLoginLimitTime"];
+            user.AutoLoginTag = (Guid?)SqlHelper.FromDbValue(row["AutoLoginTag"]);
+            user.AutoLoginLimitTime = (DateTime?)SqlHelper.FromDbValue(row["AutoLoginLimitTime"]);
             return user;
         }
     }

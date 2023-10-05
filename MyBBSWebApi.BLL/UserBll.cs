@@ -18,8 +18,10 @@ namespace MyBBSWebApi.BLL
             List<Users> userlist = userDal.GetUserByUserNoAndPassword(userNo, password.ToMd5());
             if (userlist.Count <= 0) 
             {
-                userlist = userDal.GetUserByUserNoAndAutoLoginTag(userNo, password)
-                .FindAll(m => m.AutoLoginLimitTime > DateTime.Now);
+                userlist = userDal.GetUserByUserNoAndAutoLoginTag(userNo, password);
+                // 这里还要再做一步处理，这里userlist是null的话，是没有Count这个属性的你
+                if(userlist == null) return default;
+                userlist = userlist.FindAll(m => m.AutoLoginLimitTime > DateTime.Now);
                 if(userlist.Count <= 0) 
                 {
                     return default;
@@ -93,6 +95,24 @@ namespace MyBBSWebApi.BLL
 
             UserDal userDal=new UserDal();
             int rows = userDal.UpdateUser(id, UserNo, UserName, IsDelete, password, UserLevel, token, autoLoginTag, autoLoginLimitTime);
+            if (rows > 0)
+            {
+
+            return "数据修改成功";
+
+            }
+            else
+            {
+                return "数据修改失败";
+            }
+        }
+        public string UpdateUserOfUI(Users user)
+        {
+            // 这里UserLevel 前的 int + ？的原因是让这个int可以为空
+            // 这里需要理解一个概念是视图模型和领域模型
+
+            UserDal userDal=new UserDal();
+            int rows = userDal.UpdateUserOfUI(user);
             if (rows > 0)
             {
 

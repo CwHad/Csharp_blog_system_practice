@@ -28,3 +28,5 @@ D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.DAL\obj\Debug\net6.0\MyBBSWe
 D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.DAL\obj\Debug\net6.0\refint\MyBBSWebApi.DAL.dll
 D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.DAL\obj\Debug\net6.0\MyBBSWebApi.DAL.pdb
 D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.DAL\obj\Debug\net6.0\ref\MyBBSWebApi.DAL.dll
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.DAL\bin\Debug\net6.0\MyBBSWebApi.DAL.runtimeconfig.json
+D:\CPP\CPP_new_exercise\Practice_csharp\MyBBSWebApi.DAL\obj\Debug\net6.0\MyBBSWebApi.DAL.genruntimeconfig.cache

@@ -9,8 +9,8 @@
         public int UserLevel { get; set; }
         public string? IsDelete { get; set; }
         public string Password { get; set; }
-        public Guid Token { get; set; }
-        public Guid AutoLoginTag { get; set; }
+        public Guid? Token { get; set; }
+        public Guid? AutoLoginTag { get; set; }
         public DateTime? AutoLoginLimitTime { get; set; }
     }
 }
