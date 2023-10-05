@@ -2679,11 +2679,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj",
+      "projectUniqueName": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj",
       "projectName": "MyBBSWebApi.BLL",
-      "projectPath": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj",
+      "projectPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj",
       "packagesPath": "C:\\Users\\46175\\.nuget\\packages\\",
-      "outputPath": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.BLL\\obj\\",
+      "outputPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2704,14 +2704,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj": {
-              "projectPath": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj"
+            "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj": {
+              "projectPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj"
             },
-            "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj": {
-              "projectPath": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj"
+            "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj": {
+              "projectPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj"
             },
-            "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
-              "projectPath": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj"
+            "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
+              "projectPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj"
             }
           }
         }

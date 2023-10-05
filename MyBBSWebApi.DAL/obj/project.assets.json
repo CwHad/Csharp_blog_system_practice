@@ -2915,11 +2915,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj",
+      "projectUniqueName": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj",
       "projectName": "MyBBSWebApi.DAL",
-      "projectPath": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj",
+      "projectPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj",
       "packagesPath": "C:\\Users\\46175\\.nuget\\packages\\",
-      "outputPath": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.DAL\\obj\\",
+      "outputPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2940,8 +2940,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
-              "projectPath": "d:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj"
+            "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
+              "projectPath": "D:\\CPP\\CPP_new_exercise\\Practice_csharp\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj"
             }
           }
         }
